@@ -1,5 +1,6 @@
 function makeArray(firstArray, secondArray, maxLength) {
-    if (Array.isArray(secondArray)) {
+    if (!Array.isArray(firstArray)
+    || !Array.isArray(secondArray)) {
         throw new TypeError(`firsttArray and secondArray must be arrays`);
     }
     if (typeof maxLength !== `number` || !Number.isFinite(maxLength)) {

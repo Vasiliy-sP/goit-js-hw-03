@@ -5,7 +5,7 @@ function slugify(title) {
     let normalized = title.toLowerCase().trim();
     normalized = normalized.replace(/[^\p{L}\p{N}\s-]+/gu, ``);
     normalized = normalized.replace(/\s+/g, ` `);
-    const parts = normalized.split(``).filter(Boolean);
+    const parts = normalized.split(` `).filter(Boolean);
     return parts.join(`-`);
     
 }
